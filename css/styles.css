@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Satoshi', sans-serif;
+    color: white;
+    background: black;
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav {
+    font-size: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.header-title {
+    font-weight: bold;
+    display: flex;
+    align-items: flex-start;
+}
+
+.header-title__nav-link {
+    font-size: 0.5em;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.presentation {
+    background: url(../ressources/images/hero-banner.png) center/cover no-repeat;
+    min-height: 100vh;
+
+    font-weight: bold;
+    
+    display: flex;;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presentation__title {
+    font-size: 2rem;
+}
+
+.presentation__subtitle {
+    font-size: 1rem;
+}
+
+.services__title {
+    font-weight: bold;
+    text-align: center;
+    padding: 40px;
+    
+}
+
+.services__title--super {
+    color: #a29bfe;
+}
+
+.featuredServices__container {
+    
+}
+
+.article {
+    font-size: 1em;
+    border: 1px solid #a29bfe;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+    padding: 20px;
+}   
+
+.article__title {
+    color: #a29bfe;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.article__button {
+    color: white;
+    font-weight: bold;
+    background-color: #a29bfe;
+    border: 1px solid #a29bfe;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.article__footnote {
+    font-size: 0.5em;
+    font-style: italic;
+}
