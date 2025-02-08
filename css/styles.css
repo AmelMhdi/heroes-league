@@ -181,28 +181,24 @@ padding: 0 10px 0 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
   max-width: 1200px; 
   margin: 0 auto; 
 }
 
 /* HERO ARTICLE */
 .heros__article {
-  width: calc(33% - 20px); 
-  min-height: 300px; 
+  width: calc(33.33% - 30px); 
+  height: 300px;
   margin: 10px;
   border-radius: 1rem;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; 
-  padding: 1rem;
   box-sizing: border-box;
   position: relative;
   color: white;
 	text-align: center;
+	background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .heros__article__text {
@@ -230,27 +226,27 @@ padding: 0 10px 0 10px;
 
 /* BACKGROUND IMAGES FOR ARTICLES */
 .heros__article--1 {
-	background: url(../ressources/images/catastrophic.png);
+	background-image: url(../ressources/images/catastrophic.png);
 }
 
 .heros__article--2 {
-	background: url(../ressources/images/carotte-woman.png);
+	background-image: url(../ressources/images/carotte-woman.png);
 }
 
 .heros__article--3 {
-	background: url(../ressources/images/ultraquenarde.png);
+	background-image: url(../ressources/images/ultraquenarde.png);
 }
 
 .heros__article--4 {
-	background: url(../ressources/images/poulpy.png);
+	background-image: url(../ressources/images/poulpy.png);
 }
 
 .heros__article--5 {
-	background: url(../ressources/images/oran-wu-tang-clan.png);
+	background-image: url(../ressources/images/oran-wu-tang-clan.png);
 }
 
 .heros__article--6 {
-	background: url(../ressources/images/superime.png);
+	background-image: url(../ressources/images/superime.png);
 }
 
 /* RESPONSIVE PROPERTIES */
