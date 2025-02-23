@@ -2,6 +2,7 @@
   --color-primary: #a29bfe;
   --color-text: #fff;
   --color-background: #000;
+  --color-form-background: #333;
   --font-base: 'Satoshi', sans-serif;
 }
 
@@ -18,7 +19,11 @@ html {
 }
 
 /* DESKTOP NAV */
-#desktop-nav, .container {
+#desktop-nav {
+  margin: 0 3rem;
+}
+
+.container {
 	padding: 0 20px;
 }
 
@@ -57,7 +62,7 @@ a:link {
 	color: var(--color-text);
 }
 
-.button {
+button  {
   color: var(--color-text);
   font-size: 1rem;
   font-weight: bold;
@@ -65,7 +70,7 @@ a:link {
   border: 1px solid var(--color-primary);
   border-radius: 1.2rem;
   padding: 1rem 1.4rem;
-  margin: 1.5rem;
+  margin: 1.5rem 1.5rem 0 1.5rem;
   cursor: pointer;
   text-transform: uppercase;
 }
@@ -75,7 +80,7 @@ a:link {
 	background: url(../ressources/images/hero-banner.png) center/cover no-repeat;
 	min-height: 90vh;
 	border-radius: 2rem;
-	margin: 0 2rem 0 2rem;
+	margin: 0 2rem;
 	box-shadow: inset 0 0 100px #000;
 }
 
@@ -87,7 +92,6 @@ a:link {
 }
 
 .presentation__title, .presentation__subtitle {
-	padding: 30px;
 	font-weight: bold;
 }
 
@@ -102,7 +106,6 @@ a:link {
 /* SERVICES CONTAINER */
 .container__title {
 	font-size: 3.3rem;
-	font-weight: bold;
 	text-align: center; 
   padding: 1.5em; 
 }
@@ -200,8 +203,6 @@ a:link {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto; 
 }
 
 /* HERO ARTICLE */
@@ -224,9 +225,10 @@ a:link {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 30%;
+	min-height: 30%;
 	padding: 1rem;
 	background: rgba(0,0,0,0.5);
+  box-sizing: border-box; 
 }
 
 /* HERO ARTICLE STYLES */
@@ -282,9 +284,8 @@ a:link {
 /* TEMOIGNAGNES CONTAINER */
 .temoignages__container {
 	display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 25px 50px;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 /* TEMOIGNAGES ARTICLES */
@@ -331,15 +332,13 @@ a:link {
 /* TEMOIGNAGES BACKGROUND COLOR CONTAINER */
 .temoignages__container--background {
   background: var(--color-primary);
-  /* border-bottom-left-radius: 2.5rem;
-  border-bottom-right-radius: 2.5rem; */
   height: 100%;
   max-width: fit-content; 
   margin: 0 auto; 
+  border-radius: 2.5rem;
 }
 
 /* TEMOIGNAGES RESPONSIVE BEHAVIOR */
-
 @media screen and (max-width: 1199px) and (min-width: 769px) {
   .temoignages__article {
     flex: 1 1 calc(50% - 15px);
@@ -375,7 +374,41 @@ a:link {
   }
 }
 
-@media (max)
+/* FORM */
+.sauvez_moi__form {
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+  padding: 0 20rem;
+}
+
+.sauvez_moi__form label {
+  color: var(--color-text);
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.sauvez_moi__form input,
+.sauvez_moi__form select,
+.sauvez_moi__form textarea {
+  padding: 10px;
+  border: 1px solid var(--color-form-background);
+  border-radius: .5rem;
+  background-color: var(--color-form-background);
+  color: var(--color-text);
+}
+
+.sauvez_moi__form textarea {
+  height: 200px;
+  resize: vertical;
+}
+
+.sauvez_moi__form button {
+ padding-top: 1rem;
+ margin: 2rem auto;
+}
 
 /* FOOTER NAV */
 footer {
@@ -392,6 +425,8 @@ footer {
 
 .footer-logo  {
   font-size: 2.5rem;
+  padding: 10px; 
+  margin-bottom: 10px; /
 }
 
 .footer-nav-links {
@@ -408,14 +443,172 @@ footer {
 }
 
 .footer-copyright {
-	padding: 40px 0 10px;
-  margin-top: 10px;         
+	padding: 40px 0 10px;   
   text-align: center;  
 }
 
 .footer__background {
   background-color: var(--color-primary);
 	align-items: center;   
-  padding: 20px; 
+  padding: 20px;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1); 
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1450px) {
+  .temoignages__container {
+      flex-direction: column; 
+      align-items: center; 
+      padding: 20px;
+  }
+
+  .temoignages__article {
+      width: 60%; 
+      margin: 15px 0; 
+      font-size: 1rem;
+  }
+
+  .temoignages__article h3 {
+      font-size: 1.5rem;
+  }
+
+  .temoignages__article p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+  }
+}
+
+@media (max-width: 1280px) {
+  .sauvez_moi__form {
+    padding: 0 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+      padding: 0 15px; 
+  }
+
+  .container__title {
+      font-size: 2.8rem; 
+      padding: 1em;
+  }
+
+  .sauvez_moi__form {
+    padding: 0 10rem;
+  }
+  
+  /* Desktop Navigation */
+  #desktop-nav {
+      margin: 0 1rem;
+  }
+
+  .nav-links {
+      gap: 1rem;
+      font-size: 0.9rem;
+  }
+
+  /* Presentation Section */
+  .presentation {
+      margin: 0 1rem; 
+  }
+
+  .presentation__title {
+      font-size: 4rem;
+  }
+
+  .presentation__subtitle {
+      font-size: 1.2rem;
+  }
+
+  /* Featured Services Section */
+ .featuredServices__container {
+      display: grid;
+      grid-template-areas: 
+      "article-1"
+      "article-2"
+      "article-3"
+      "article-4"
+      "article-5"
+      "article-6";
+      grid-template-columns: 1fr; 
+      padding: 0 1.5rem;
+      }
+
+  /* Heros Section */
+  .hero__container {
+      flex-direction: column; 
+      align-items: center; 
+  }
+
+  .heros__article {
+      width: 90%; 
+      margin: 10px 0;
+  }
+  
+  /* Testimonials section */
+  .temoignages__container {
+    flex-direction: column; 
+  }
+
+  .temoignages__article {
+    width: 90%;
+    margin: 10px 0; 
+  }
+}
+
+@media (max-width: 480px) {
+  /* General adjustments */
+  .container__title {
+      font-size: 2rem; 
+  }
+
+  /* Desktop Navigation */
+  #desktop-nav {
+      margin: 0 0.5rem; 
+  }
+
+  .nav-links {
+      gap: 0.5rem;
+      font-size: 0.8rem;
+  }
+
+  /* Presentation Section */
+  .presentation {
+      margin: 0 0.5rem; 
+  }
+
+  .presentation__title {
+      font-size: 3rem;
+  }
+
+  .presentation__subtitle {
+      font-size: 1rem;
+  }
+
+  /* Featured Services Section */
+  .featuredServices__container {
+      padding: 0 1rem;
+  }
+
+  .article__title {
+      font-size: 2rem;
+  }
+
+  .article__subtitle {
+      font-size: 1rem;
+  }
+  
+  /* Hero section */
+   .heros__article {
+      width: 100%;
+      margin: 10px 0;
+  }
+  
+  /* Testimonials section */
+    .temoignages__article {
+    width: 100%; 
+    margin: 10px 0; 
+  }
 }
 
