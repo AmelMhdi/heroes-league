@@ -21,6 +21,6 @@
 
 ## Links
 
-Solution URL: [GitHub - Heros League](https://github.com/AmelMhdi/heroes-league.git)
+Solution URL: [GitHub](https://github.com/AmelMhdi/heroes-league.git)
 
-Live Site URL: []()
+Live site URL [GitHub.io](https://amelmhdi.github.io/heroes-league/)
