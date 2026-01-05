@@ -431,11 +431,13 @@ footer {
 
 .footer-nav-links {
 	list-style-type: none;
-	padding: 0;
-  margin: 0;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: normal;
 }
 
 .footer-nav-links li {
@@ -445,6 +447,8 @@ footer {
 .footer-copyright {
 	padding: 40px 0 10px;   
   text-align: center;  
+  font-size: 0.9rem;
+  padding-top: 6rem;
 }
 
 .footer__background {
@@ -501,6 +505,8 @@ footer {
   /* Desktop Navigation */
   #desktop-nav {
       margin: 0 1rem;
+      position: sticky;
+      top: 0;
   }
 
   .nav-links {
