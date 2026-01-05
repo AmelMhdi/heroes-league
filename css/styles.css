@@ -21,6 +21,10 @@ html {
 /* DESKTOP NAV */
 #desktop-nav {
   margin: 0 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--color-background);
 }
 
 .container {
@@ -60,6 +64,14 @@ nav .logo {
 a:link {
 	text-decoration: none;
 	color: var(--color-text);
+}
+
+.nav-links:hover {
+  color: var(--color-primary);
+}
+
+#desktop-nav a:hover {
+  color: var(--color-primary);
 }
 
 button  {
@@ -507,11 +519,12 @@ footer {
       margin: 0 1rem;
       position: sticky;
       top: 0;
+      z-index: 1000;
   }
 
   .nav-links {
       gap: 1rem;
-      font-size: 0.9rem;
+      font-size: 1rem;
   }
 
   /* Presentation Section */
@@ -571,7 +584,7 @@ footer {
 
   /* Desktop Navigation */
   #desktop-nav {
-      margin: 0 0.5rem; 
+      margin: 0 0.5rem;
   }
 
   .nav-links {
