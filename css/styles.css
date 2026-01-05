@@ -219,17 +219,18 @@ button  {
 
 /* HERO ARTICLE */
 .heros__article {
+  position: relative;
   width: calc(33.33% - 30px); 
   height: 300px;
   margin: 10px;
   border-radius: 1rem;
   box-sizing: border-box;
-  position: relative;
   color: var(--color-text);
   text-align: center;
 	background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .heros__article__text {
@@ -239,8 +240,33 @@ button  {
 	width: 100%;
 	min-height: 30%;
 	padding: 1rem;
-	background: rgba(0,0,0,0.5);
+	background: rgba(0,0,0,0.6);
   box-sizing: border-box; 
+}
+
+.heros__article__surtitle-container {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 90;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.heros__article__surtitle-text {
+  position: relative;
+  background-color: rgba(175, 169, 255, 0.589);
+  color: white;
+  font-size: 0.9rem;
+  font-style: italic;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  max-width: 100%;
+  text-align: center;
+  line-height: 1.4;
 }
 
 /* HERO ARTICLE STYLES */
@@ -253,6 +279,13 @@ button  {
 .heros__article__subtitle {
   font-size: 1rem;
   line-height: 1.4;
+}
+
+.heros__article__surtitle {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);  
 }
 
 /* BACKGROUND IMAGES FOR ARTICLES */
@@ -412,6 +445,10 @@ button  {
   color: var(--color-text);
 }
 
+input:focus {
+  outline: 2px solid var(--color-primary);
+}
+
 .sauvez_moi__form textarea {
   height: 200px;
   resize: vertical;
@@ -450,6 +487,11 @@ footer {
   margin: 0;
   font-size: 0.9rem;
   font-weight: normal;
+}
+
+.footer-nav-links a:hover {
+  font-weight: bold;
+  transition: font-weight 0.3s ease;
 }
 
 .footer-nav-links li {
